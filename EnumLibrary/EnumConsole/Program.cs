@@ -67,7 +67,6 @@ namespace EnumConsole
                 mo++;
                 Months month = (Months)mc;
                 Console.WriteLine("{0}: G-{1:G} D-{1:D} {2}", mc, month, mo.ToString());
-
             }
         }
         static void Names()
