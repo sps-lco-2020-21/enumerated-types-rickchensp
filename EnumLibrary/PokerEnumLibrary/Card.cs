@@ -15,10 +15,11 @@ namespace PokerEnumLibrary
             _value = value;
             _suit = suit;         
         }
-
         public override string ToString()
         {
-            return _suit.ToString() + "   " + _value.ToString();
+            return _value.ToString() + " of " + _suit.ToString();
         }
+
+        public CardValues Value { get { return _value; } }
     }
 }

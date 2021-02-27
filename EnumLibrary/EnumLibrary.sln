@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumLibrary", "EnumLibrary\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumConsole", "EnumConsole\EnumConsole.csproj", "{AA2DFEF6-B387-451B-84C8-14A764572C4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerEnumLibrary", "PokerEnumLibrary\PokerEnumLibrary.csproj", "{741FFF0E-2289-4E72-9218-E12D3BA19AF3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendedEnumLibrary", "PokerEnumLibrary\ExtendedEnumLibrary.csproj", "{741FFF0E-2289-4E72-9218-E12D3BA19AF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerEnumConsole", "PokerConsole\PokerEnumConsole.csproj", "{BB9F731C-0275-4EA2-887D-FB4450C1FB1C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendedEnumConsole", "PokerConsole\ExtendedEnumConsole.csproj", "{BB9F731C-0275-4EA2-887D-FB4450C1FB1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
