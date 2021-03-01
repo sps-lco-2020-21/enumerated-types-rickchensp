@@ -21,5 +21,6 @@ namespace PokerEnumLibrary
         }
 
         public CardValues Value { get { return _value; } }
+
     }
 }

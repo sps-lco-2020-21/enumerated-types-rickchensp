@@ -58,18 +58,9 @@ namespace PokerEnumLibrary
             return shuffled.Take(n).ToList();
         }
 
-        public static List<CardValues> LongestRun2(this List<Card> hand)
+        public static List<CardValues> FindLongestRun(int cardsBinary)
         {
             List<CardValues> longestRun = new List<CardValues> { };
-            int cardsBinary = 0;
-            foreach (Card card in hand)
-                cardsBinary = cardsBinary | (int)card.Value;  //bitwise or all the values to get a string of 1s and 0s
-            
-            if(cardsBinary % 2 == 1)
-            {
-                cardsBinary = cardsBinary + (1 << 13);  //when Ace counts as high
-            }
-
             int count = 0, start = 0;
             for (int i = 14; i >= 0; --i)
             {
@@ -82,7 +73,7 @@ namespace PokerEnumLibrary
                         longestRun.Clear();
                         for (int j = 0; j < count; ++j)
                         {
-                            if(start + j == 13)
+                            if (start + j == 13)
                                 longestRun.Add(CardValues.Ace);  //if ace as high is included in longestRun
                             else
                                 longestRun.Add((CardValues)(1 << start + j));  //add corresponding CardValue to longestRun
@@ -94,6 +85,19 @@ namespace PokerEnumLibrary
                 cardsBinary = cardsBinary >> 1;// go to next bit
             }
             return longestRun;
+        }
+
+        public static List<CardValues> LongestRun2(this List<Card> hand)
+        {
+            int cardsBinary = 0;
+            foreach (Card card in hand)
+                cardsBinary = cardsBinary | (int)card.Value;  //bitwise or all the values to get a string of 1s and 0s
+
+            if (cardsBinary % 2 == 1)
+            {
+                cardsBinary = cardsBinary + (1 << 13);  //when Ace counts as high, add Ace as a 14th card
+            }
+            return FindLongestRun(cardsBinary);
         }
     }
 }

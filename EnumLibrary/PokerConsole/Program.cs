@@ -22,6 +22,7 @@ namespace ExtendedEnumConsole
             List<Card> shuffled = PokerUtilities.ShuffledCards(allCards);
             List<Card> hand1 = shuffled.RandomHand(5);
             List<CardValues> longestRun = hand1.LongestRun2();
+            List<Card> pairs = hand1.Pairs();
             Card card1 = "TC".NameToCard();
             Card card2 = "9D".NameToCard();
         }
